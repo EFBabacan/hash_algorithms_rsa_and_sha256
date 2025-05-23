@@ -32,5 +32,16 @@ namespace hash_algorithms_rsa_and_sha256
 
             sha256Window.ShowDialog();
         }
+
+        private void buttonShowRsaToolkit_Click(object sender, EventArgs e)
+        {
+            // 1. RsaToolkitForm sınıfından yeni bir örnek (nesne) oluşturuyoruz.
+            RsaToolkitForm rsaForm = new RsaToolkitForm();
+
+            // 2. Oluşturulan bu formu kullanıcıya gösteriyoruz.
+            //    rsaForm.ShowDialog(); // Bu, RsaToolkitForm kapatılana kadar MainForm'u kilitler.
+            rsaForm.Show();         // Bu, RsaToolkitForm'u açar ve MainForm ile etkileşim devam edebilir.
+                                    
+        }
     }
 }
